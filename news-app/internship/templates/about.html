@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% load static %}
+	{% include 'header.html' %}
+	<title>AboutUs Page</title>
+    <body style="background-color:#E3E3E3">
+        {% include 'navigation.html' %}
+        <div class="jumbotron">
+			<h1>NewsPage</h1>
+			<p>News is something somebody doesn't want printed; all else is advertising.</p>
+		</div>
+		<section class="mb-4" id="aboutus">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-12">
+						<img src="{% static 'images/img2.jpg' %}" class="img-fluid aboutimg">
+					</div>
+					<div class="col-lg-6 col-md-6 col-12">
+						<h2 class="display-7">About the platform</h2>
+						<p class="py-4" align="justify">
+							Python is very famous because of its wide area of applications. One of the application of
+							python is web development. Many frameworks of python are available for web development for
+							example Django, Flask, Web2py, CherryPy etc. Django is very popular framework and huge
+							acceptance in corporate industry.
+						</p>
+						<p class="py-2" align="justify">
+							In this internship, I have developed a website along with real time API handling in web pages
+							using django framework. This website will fetch live data and display all news in well-structured
+							and responsive manner. It provides latest news from India and around the world. One master news
+							website with different pages of news categories. Categories like National (Indian National News),
+							Business, Sports and many more.
+						</p>
+						<p class="py-2" align="justify">Connect with us on other platforms.</p>
+						<div >
+							<a href="https://www.facebook.com/" target="_blank"><img src="{% static 'images/facebook.png' %}" class="logo" style="width: 25px; height: 25px !important;"></a>
+							<a href="https://twitter.com/" target="_blank"><img src="{% static 'images/twitter.png' %}" class="logo" style="width: 25px; height: 25px !important;"></a>
+							<a href="https://in.linkedin.com/" target="_blank"><img src="{% static 'images/linkdin.png' %}" class="logo" style="width: 25px; height: 25px !important;"></a>
+							<a href="https://www.instagram.com/" target="_blank"><img src="{% static 'images/instagram.png' %}" class="logo" style="width: 25px; height: 25px !important;"></a>
+							<a href="https://in.pinterest.com/" target="_blank"><img src="{% static 'images/pinterest.png' %}" class="logo" style="width: 25px; height: 25px !important;"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+    	<script src="{% static 'js/scrolling.js' %}"  type="text/javascript"></script>
+        {% include 'footer.html' %}
+    </body>
+</html>

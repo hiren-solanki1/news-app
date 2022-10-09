@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% load static %}
+	{% include 'header.html' %}
+	<title>Startup Page</title>
+    <body style="background-color:#E3E3E3">
+
+        {% include 'navigation.html' %}
+        <div class="wrapper">
+				<div class="container-fluid">
+					<div class="row">
+						{% for value in startupdata.data %}
+							<div class="col-md-6 col-lg-4">
+								<div class="card " style="margin:1rem; height:45rem;">
+									<img class="card-img-top card-image" src="{{value.imageUrl}}"  alt="...">
+									<div class="card-body">
+										<h5 class="card-title" style="font-weight:bold; position: relative; text-transform:uppercase">{{value.title}}</h5>
+										<p class="card-text" style="position: relative;" align="justify">{{value.content}}</p>
+										<p class="card-text" style="position: relative;">{{ value.date }}</p>
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+		</div>
+        <script src="{% static 'js/scrolling.js' %}"  type="text/javascript"></script>
+        {% include 'footer.html' %}
+    </body>
+</html>
